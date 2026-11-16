@@ -1,0 +1,14 @@
+<script>
+// Quarto's output-location: column-fragment shows the code first and reveals
+// the plot as a fragment. Swap them so the plot shows first and the code
+// follows, giving the plot more screen time.
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".reveal .columns > .column.fragment").forEach((plot) => {
+    const code = plot.parentElement.querySelector(":scope > .column:not(.fragment)");
+    if (!code) return;
+    plot.classList.remove("fragment");
+    plot.classList.add("plot-column");
+    code.classList.add("fragment", "code-column");
+  });
+});
+</script>

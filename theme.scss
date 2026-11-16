@@ -1,0 +1,48 @@
+/*-- scss:defaults --*/
+$theme-accent: #0f8a7e;
+$link-color: $theme-accent;
+$presentation-heading-color: #1f2328;
+$presentation-font-size-root: 36px;
+$code-block-font-size: 0.62em;
+$presentation-title-slide-text-align: left;
+
+/*-- scss:rules --*/
+.reveal h2 {
+  border-bottom: 4px solid $theme-accent;
+  padding-bottom: 0.15em;
+  display: inline-block;
+}
+
+.reveal .title-logo {
+  height: 320px;
+  float: right;
+  margin: 0 0 0 1em;
+}
+
+.reveal .lead {
+  font-size: 1.15em;
+  color: #444;
+}
+
+.reveal .accent {
+  color: $theme-accent;
+  font-weight: 600;
+}
+
+.reveal div.sourceCode {
+  border-left: 4px solid $theme-accent;
+}
+
+.reveal .cell-output-display img {
+  max-height: 820px;
+}
+
+// Plot left and shown first, code right as a fragment (see plot-first.html).
+.reveal .columns > .column.plot-column {
+  order: -1;
+  width: 60% !important;
+}
+
+.reveal .columns > .column.code-column {
+  width: 40% !important;
+}
